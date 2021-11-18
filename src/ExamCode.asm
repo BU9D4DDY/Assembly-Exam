@@ -19,3 +19,18 @@ allright   DB 0Dh,0Ah,"All your answer are correct",0Dh,0Ah,'$'
 noright    DB 0Dh,0Ah,"No right answer",'$'
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;; Printing Function;;;;;;;;;;;;;;;;;;;;;
+PRINT macro msg
+    
+    pusha
+    pushf
+      
+    LEA DX,msg  
+    MOV AH,09H
+    INT 21H
+    
+    popf
+    popa  
+    
+    endm
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;       
