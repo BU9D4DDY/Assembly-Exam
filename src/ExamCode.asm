@@ -1,8 +1,6 @@
 .model small 
 
-
 .data
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 header DB "- Assembly Exam -",0Dh,0Ah
@@ -19,7 +17,6 @@ allright   DB 0Dh,0Ah,"All your answer are correct",0Dh,0Ah,'$'
 noright    DB 0Dh,0Ah,"No right answer",'$'
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 .code
 ;;;;;;;;;;;;;;;; Printing Function;;;;;;;;;;;;;;;;;;;;;
 PRINT macro msg
